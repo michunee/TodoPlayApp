@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="shortcut icon" href="../images/todo.ico">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="todo-table">
+        <form>
+          <input type="text" name="item" placeholder="Add new item..." required />
+          <button class = "add-button" type="submit">Add Item</button>
+        </form>
+        <ul>
+          
+          <% for(data of dataTodo) { %>
+            <li><%= data.itemTodo %>
+              <form action="../todo/delete/<%= data.idTodo %>" method="GET">
+                <button class = "delete-button" type="submit">Delete</button>
+              </form>
+            </li>
+          <% } %>
+        </ul>
+    </div>
+  </body>
+</html>
