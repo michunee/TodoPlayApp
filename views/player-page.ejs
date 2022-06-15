@@ -1,13 +1,49 @@
 <html>
   <head>
-    <title>Todo List</title>
+    <title>Todo App</title>
     <link rel="shortcut icon" href="../images/todo.ico">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
-    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/player-page.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    This is player page
-    
+    <div>
+      <a href="../todo">
+        <img src="../images/todo.ico" alt="">
+        <label>Todo App</label>
+      </a>
+    </div>
+    <div id="player-table">
+      <table class="table table-bordered table-dark table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>To do</th>
+            <th>Number</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(data of dataPlayer) { %>
+            <tr>
+              <td><%= data.namePlayer %></td>
+              <td><%= data.email %></td>
+              <td><%= data.position %></td>
+              <td><%= data.phonenumber %></td>
+              <td><%= data.address %></td>
+              <th>
+                <button type="submit">Edit</button>
+                <button type="submit">Delete</button>
+                </form>
+              </th>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <form action="../player/add" method="get">
+        <button id="add-button">Add Participant</button>
+      </form>
+    </div>
   </body>
 </html>

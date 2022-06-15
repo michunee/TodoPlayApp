@@ -1,12 +1,18 @@
 <html>
   <head>
-    <title>Todo List</title>
+    <title>Todo App</title>
     <link rel="shortcut icon" href="../images/todo.ico">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
-    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/todo-page.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
+    <div>
+      <a href="../todo">
+        <img src="../images/todo.ico" alt="">
+        <label>Todo App</label>
+      </a>
+    </div>
     <div id="todo-table">
         <form action="../todo/add" method="post">
           <input type="text" name="item" placeholder="Add new item..." required />
@@ -14,7 +20,7 @@
         </form>
         <ul>
           <% for(data of dataTodo) { %>
-            <li><a href="../todo/delete/<%= data.idTodo %>" method="get"><%= data.itemTodo %></a></li>
+            <li><a href="../todo/delete/<%= data.idTodo %>" method="get" required><%= data.itemTodo %></a></li>
           <% } %>
         </ul>
         <form action="../player" method="get">
