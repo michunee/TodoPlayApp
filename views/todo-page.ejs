@@ -8,20 +8,20 @@
   </head>
   <body>
     <div id="todo-table">
-        <form>
+        <form action="../todo/add" method="post">
           <input type="text" name="item" placeholder="Add new item..." required />
           <button class = "add-button" type="submit">Add Item</button>
         </form>
         <ul>
-          
           <% for(data of dataTodo) { %>
-            <li><%= data.itemTodo %>
-              <form action="../todo/delete/<%= data.idTodo %>" method="GET">
-                <button class = "delete-button" type="submit">Delete</button>
-              </form>
-            </li>
+            <li><a href="../todo/delete/<%= data.idTodo %>" method="get"><%= data.itemTodo %></a></li>
           <% } %>
         </ul>
+        <form action="../player" method="get">
+          <button class="participants-button">Participants List</button>
+        </form>
+        
     </div>
+    
   </body>
 </html>

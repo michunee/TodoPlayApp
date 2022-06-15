@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var todoRouter = require('./routes/todo');
+var playerController = require('./routes/player');
 
 var app = express();
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/todo', todoRouter);
+app.use('/player', playerController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

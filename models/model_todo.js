@@ -25,3 +25,16 @@ exports.deleteTodo = async(id) => {
         });
     });
 }
+
+exports.addTodo = async(todo) => {
+    return new Promise((resolve,reject) => {
+        let sql = `INSERT INTO todo (itemTodo) VALUES ('${todo}')`;
+        let query = db.query(sql, todo, (err, result) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}
