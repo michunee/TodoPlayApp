@@ -31,10 +31,18 @@ const getEditPlayerPage = async(req, res) => {
     res.render('edit-player-page',{dataPlayer : dataPlayer});
 }
 
+const editPlayer = async(req, res) => {
+    let id = req.params.idPlayer;
+    let {name, email, todo, phonenumber, address, detail} = req.body;
+    let dataPlayer = await PlayerModel.editPlayer(id, name, email, todo, phonenumber, address, detail);
+    res.redirect('/player');
+}
+
 module.exports = {
     getPlayerPage,
     getAddPlayerPage,
     addPlayer,
     deletePlayer,
-    getEditPlayerPage
+    getEditPlayerPage,
+    editPlayer
 }

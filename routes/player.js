@@ -7,5 +7,6 @@ router.get('/add', playerController.getAddPlayerPage);
 router.post('/add', playerController.addPlayer);
 router.get('/delete/:idPlayer', playerController.deletePlayer);
 router.get('/edit/:idPlayer', playerController.getEditPlayerPage);
+router.post('/edit/:idPlayer', playerController.editPlayer);
 
 module.exports = router;

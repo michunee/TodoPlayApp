@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Todo App</title>
+    <title>Todo Play</title>
     <link rel="shortcut icon" href="../images/todo.ico">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
@@ -10,12 +10,12 @@
     <div>
       <a href="../todo">
         <img src="../images/todo.ico" alt="">
-        <label>Todo App</label>
+        <label>Todo Play</label>
       </a>
     </div>
     <br>
     <div id="player-table">
-      <table class="table table-bordered table-dark table-hover">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -35,7 +35,9 @@
               <td><%= data.address %></td>
               <th>
                 <button type="submit">Detail</button>
-                <button type="submit">Edit</button>
+                <form action="../player/edit/<%= data.idPlayer %>" method="get">
+                  <button type="submit">Edit</button>
+                </form>
                 <form action="../player/delete/<%= data.idPlayer %>" method="get">
                   <button type="submit">Delete</button>
                 </form>

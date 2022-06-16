@@ -60,3 +60,25 @@ exports.getPlayerById = async(id) => {
         );
     });
 }
+
+exports.editPlayer = async(id, name, email, todo, phonenumber, address, detail) => {
+    return new Promise((resolve,reject) => {
+        let data = {
+            namePlayer : name,
+            email : email,
+            position : todo,
+            phonenumber : phonenumber,
+            address : address,
+            detail : detail
+        }
+        let sql = `UPDATE player SET ? WHERE idPlayer = ${id}`;
+        let query = db.query(sql, data, (err, result) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        }
+        );
+    });
+}

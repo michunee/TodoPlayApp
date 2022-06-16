@@ -1,11 +1,35 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo Play</title>
+    <link rel="shortcut icon" href="/images/todo.ico">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <link href="/stylesheets/edit-player-page.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    This is edit-player-page.ejs <%= dataPlayer[0].idPlayer %> <%= dataPlayer[0].namePlayer %>
+    <div>
+        <a href="/todo">
+          <img src="/images/todo.ico" alt="">
+          <label>Todo Play</label>
+        </a>
+    </div>
+    <br>
+    <div>
+      <form action="/player/edit/<%= dataPlayer[0].idPlayer %>" method="post">
+        <input type="text"name="name" value="<%= dataPlayer[0].namePlayer %>"><br>
+        <label class = "edit-label">Name :</label><br>
+        <input type="text"name="email" value="<%= dataPlayer[0].email %>"><br>
+        <label class = "edit-label">Email :</label><br>      
+        <input type="text"name="todo" value="<%= dataPlayer[0].position %>"><br>
+        <label class = "edit-label">To do :</label><br>        
+        <input type="text"name="phonenumber" value="<%= dataPlayer[0].phonenumber %>"><br>
+        <label class = "edit-label">Phonenumber :</label><br>       
+        <input type="text"name="address" value="<%= dataPlayer[0].address %>"><br>
+        <label class = "edit-label">Address :</label><br>       
+        <textarea name="detail" cols="30" rows="10"><%= dataPlayer[0].detail %></textarea><br>
+        <label class = "edit-label">Detail To Do:</label><br><br><br><br>
+        <button type="submit">Confirm to edit</button>
+      </form>     
+    </div>
 </body>
 </html>
