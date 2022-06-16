@@ -12,7 +12,24 @@
           <img src="../images/todo.ico" alt="">
           <label>Todo App</label>
         </a>
-      </div>
-    This is add page
+    </div>
+    <br>
+    <div>
+      <form action="../player/add" method="post">
+        <input type="text"name="name" required><br>
+        <label class = "add-label">Name :</label><br>
+        <input type="text"name="email" required><br>
+        <label class = "add-label">Email :</label><br>      
+        <input type="text"name="todo" required><br>
+        <label class = "add-label">To do :</label><br>        
+        <input type="text"name="phonenumber" required><br>
+        <label class = "add-label">Phonenumber :</label><br>       
+        <input type="text"name="address" required><br>
+        <label class = "add-label">Address :</label><br>       
+        <textarea name="detail" cols="30" rows="10" required></textarea><br>
+        <label class = "add-label">Detail To Do:</label><br><br><br><br>
+        <button type="submit" required>Confirm to add</button>
+      </form>     
+    </div>
   </body>
 </html>

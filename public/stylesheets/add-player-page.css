@@ -13,10 +13,54 @@ img{
 label{
     padding-left: 15px;
     font-size: 40px;
+    color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
     color: white;
     text-decoration: none;
+}
+
+input[type="text"]{
+    width: 70%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: right;
+    font-size: 20px;
+    color: #989898;
+    margin-right: 40px;
+}
+
+.add-label{
+    padding-left: 45px;
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+    width: 70%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: right;
+    font-size: 20px;
+    color: #989898;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 40px;
+}
+
+button{
+    margin-left: 40px;
+    padding: 20px;
+    width: 20%;
+    float: left;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
 }
