@@ -34,7 +34,9 @@
               <td><%= data.phonenumber %></td>
               <td><%= data.address %></td>
               <th>
-                <button type="submit">Detail</button>
+                <form action="../player/detail/<%= data.idPlayer %>" method="get">
+                  <button type="submit">Detail</button>
+                </form>
                 <form action="../player/edit/<%= data.idPlayer %>" method="get">
                   <button type="submit">Edit</button>
                 </form>

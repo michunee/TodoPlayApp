@@ -29,7 +29,7 @@ input[type="text"]{
     border: 0;
     float: right;
     font-size: 20px;
-    color: #989898;
+    color: white;
     margin-right: 40px;
 }
 
@@ -47,7 +47,7 @@ textarea{
     border: 0;
     float: right;
     font-size: 20px;
-    color: #989898;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 40px;
 }

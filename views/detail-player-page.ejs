@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <title>Todo Play</title>
+    <link rel="shortcut icon" href="/images/todo.ico">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <link href="/stylesheets/detail-player-page.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div>
+        <a href="/todo">
+          <img src="/images/todo.ico" alt="">
+          <label>Todo Play</label>
+        </a>
+    </div>
+    <br><br>
+    <div>
+        <label class="label-detail">Name:</label> <label class="label-text"><%= dataPlayer[0].namePlayer%></label><br>
+        <label class="label-detail">To do:</label> <label class="label-text"><%= dataPlayer[0].position%></label><br>
+        <label class="label-detail">Details to do:</label><br><br>
+        <textarea name="detail" cols="30" rows="15" readonly><%= dataPlayer[0].detail %></textarea><br>
+    </div> 
+</body>
+</html>

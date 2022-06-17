@@ -38,11 +38,18 @@ const editPlayer = async(req, res) => {
     res.redirect('/player');
 }
 
+const getPlayerDetails = async(req, res) => {
+    let id = req.params.idPlayer;
+    let dataPlayer = await PlayerModel.getPlayerById(id);
+    res.render('detail-player-page',{dataPlayer : dataPlayer});
+}
+
 module.exports = {
     getPlayerPage,
     getAddPlayerPage,
     addPlayer,
     deletePlayer,
     getEditPlayerPage,
-    editPlayer
+    editPlayer,
+    getPlayerDetails
 }
